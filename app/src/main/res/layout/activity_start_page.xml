@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="comm.crion.rat.app.StartPage">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_height="100dp"
+                android:layout_width="100dp"
+                android:id="@+id/txtIcon"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:src="@mipmap/ic_launcher"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:fontFamily="sans-serif-smallcaps" />
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/txtAppName"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/app_name"
+                android:layout_below="@+id/txtIcon"
+                android:textSize="26sp"
+                android:textColor="#fff"
+                android:fontFamily="sans-serif-smallcaps" />
+            <android.support.v7.widget.AppCompatSpinner
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/spiCountryCode"
+                android:layout_alignBottom="@+id/edtPhoneNumber"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                app:backgroundTint="#fff"
+                android:fontFamily="casual"
+                android:textColor="#fff"
+                android:layout_marginStart="20dp" />
+            <android.support.v7.widget.AppCompatEditText
+                app:backgroundTint="#fff"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/edtPhoneNumber"
+                android:inputType="phone"
+                android:layout_toEndOf="@+id/spiCountryCode"
+                android:layout_below="@+id/txtAppName"
+                android:layout_marginTop="50dp"
+                android:textSize="18sp"
+                android:layout_marginRight="20dp"
+                android:textColorHint="#fff"
+                android:textColor="#fff"
+                android:layout_toRightOf="@+id/spiCountryCode"
+                android:layout_marginEnd="20dp" />
+
+            <android.support.v7.widget.AppCompatEditText
+                app:backgroundTint="#fff"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/edtConfirmationCode"
+                android:inputType="number"
+                android:layout_below="@+id/txtAppName"
+                android:layout_marginTop="50dp"
+                android:hint="SMS Code"
+                android:visibility="gone"
+                android:textSize="18sp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:textColorHint="#fff"
+                android:textColor="#fff"
+                android:layout_marginEnd="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/buttonGetSMS"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:id="@+id/lblSmsSent"
+                android:visibility="invisible"
+                android:text="The SMS Has Been Sent"/>
+
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textSize="18sp"
+                android:minHeight="0dp"
+                android:textColor="#b9dfe4"
+                android:background="#33a8ae"
+                android:id="@+id/buttonGetSMS"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/spiCountryCode"
+                android:layout_marginTop="60dp"
+                android:padding="6dp"
+                android:layout_alignEnd="@+id/edtPhoneNumber"
+                android:layout_alignLeft="@+id/spiCountryCode"
+                android:textAllCaps="false"
+                android:text="Log In"
+                android:layout_alignRight="@+id/edtPhoneNumber"
+                android:layout_alignStart="@+id/spiCountryCode" />
+            <RelativeLayout
+                android:id="@+id/loadingPanel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/spiCountryCode"
+                android:layout_marginTop="60dp"
+                android:layout_alignEnd="@+id/edtPhoneNumber"
+                android:layout_alignLeft="@+id/spiCountryCode"
+                android:layout_alignRight="@+id/edtPhoneNumber"
+                android:layout_alignStart="@+id/spiCountryCode"
+                android:visibility="gone"
+                android:gravity="center" >
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/rowImage"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_account_circle_black_24dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recylerTxtUsername"
+        android:textSize="18sp"
+        android:layout_toStartOf="@+id/recylerButtInvite"
+        android:layout_toEndOf="@+id/rowImage"
+        android:textColor="#000"
+        android:layout_alignTop="@+id/rowImage"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/send"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/recylerButtInvite"
+        android:textColor="#fff"
+        android:background="#33a8ae"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recylerTxtUsername"
+        android:layout_toStartOf="@+id/recylerButtInvite"
+        android:id="@+id/recylerTxtNumber"
+        android:textSize="12sp"
+        android:layout_toEndOf="@+id/rowImage"
+        android:textColor="#000"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/rowImage"
+        android:background="#e2e2e2"/>
+</RelativeLayout>

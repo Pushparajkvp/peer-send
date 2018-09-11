@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/notiImage"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/ic_launcher_round"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/notiImage"
+        android:textColor="#000"
+        android:layout_centerVertical="true"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:text="Sending file"
+        android:id="@+id/textView" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/notificationCancelButton"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_cancel_black_24dp"
+        android:layout_alignParentEnd="true"/>
+
+    <ProgressBar
+        android:id="@+id/notificationProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/notificationCancelButton"
+        android:layout_alignStart="@+id/textView"
+        android:layout_below="@+id/notificationCancelButton" />
+</RelativeLayout>

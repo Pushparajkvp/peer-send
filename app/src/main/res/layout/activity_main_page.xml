@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.iosdev.pushit.MainPage">
+    <include layout="@layout/toolbar_layout" android:id="@+id/toolbar_id"/>
+    <Button
+        android:layout_width="175dp"
+        android:minHeight="0dp"
+        android:layout_below="@+id/toolbar_id"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:text="@string/invite"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/inviteButton"
+        android:textColor="#fff"
+        android:background="#33a8ae"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="invitePeople"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/inviteButton"
+        android:layout_marginTop="10dp"
+        android:id="@+id/line"
+        android:background="#e2e2e2"/>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line"
+        android:id="@+id/recycleViewKnow"/>
+
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:gravity="center" >
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+    </RelativeLayout>
+</RelativeLayout>

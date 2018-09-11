@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.iosdev.pushit.SetupPage">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="comm.crion.rat.app.StartPage">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set Up Your Account"
+                android:textColor="#a5afb9"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="50dp"
+                android:textSize="16sp"
+                android:id="@+id/lblSetUpProfile"
+                />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/setUpPageImage"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/lblSetUpProfile"
+                android:src="@drawable/ic_account_circle_black_24dp"
+                android:layout_marginTop="25dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/setUpPageImage"
+                android:layout_alignLeft="@+id/lblSetUpProfile"
+                android:layout_alignStart="@+id/lblSetUpProfile"
+                android:layout_marginRight="40dp"
+                android:layout_marginEnd="40dp"
+                android:id="@+id/setUpPageLinearLayout"
+                android:layout_marginTop="40dp">
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/setUpPageName"
+                    app:backgroundTint="#a5afb9"
+                    android:textColor="#a5afb9"
+                    android:textColorHint="#a5afb9"
+                    android:layout_width="0dp"
+                    android:layout_weight=".50"
+                    android:maxLines="1"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"/>
+            </LinearLayout>
+
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textSize="18sp"
+                android:minHeight="0dp"
+                android:textColor="#b9dfe4"
+                android:background="#33a8ae"
+                android:maxLines="1"
+                android:id="@+id/setUpUpdate"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/setUpPageLinearLayout"
+                android:layout_marginTop="20dp"
+                android:padding="6dp"
+                android:layout_alignEnd="@+id/setUpPageLinearLayout"
+                android:layout_alignLeft="@+id/setUpPageLinearLayout"
+                android:textAllCaps="false"
+                android:text="Update"
+                android:onClick="updateClicked"
+                android:layout_alignRight="@+id/setUpPageLinearLayout"
+                android:layout_alignStart="@+id/setUpPageLinearLayout" />
+            <RelativeLayout
+                android:id="@+id/loadingPanel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/setUpUpdate"
+                android:layout_marginTop="20dp"
+                android:layout_alignEnd="@+id/setUpPageLinearLayout"
+                android:layout_alignLeft="@+id/setUpPageLinearLayout"
+                android:layout_alignRight="@+id/setUpPageLinearLayout"
+                android:layout_alignStart="@+id/setUpPageLinearLayout"
+                android:visibility="gone"
+                android:gravity="center" >
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+
