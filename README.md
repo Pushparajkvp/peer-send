@@ -6,12 +6,6 @@ PeerSend is an android application that provides the fetures of video calling , 
 
 This is a work in progress we are still improving it's stability and code modularity. This note will be removed ones everything is finished
 
-# Project developed by
-
-1. K Nimal Manickam
-1. P Nishaanth
-1. K V Pushparaj
-
 # Technical stack
 
 1. WebRTC
